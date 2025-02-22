@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ستيفن | مطور ويب محترف</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* الأنيميشنات */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); }
+            to { transform: translateY(0); }
+        }
+
+        /* التنسيقات العامة */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.8;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* الهيدر */
+        header {
+            background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .header-content {
+            animation: fadeIn 1s ease-out;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            letter-spacing: -2px;
+        }
+
+        /* الأقسام */
+        section {
+            padding: 6rem 0;
+            border-bottom: 1px solid #334155;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #0ea5e9;
+            position: relative;
+            display: inline-block;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: #0ea5e9;
+        }
+
+        /* المهارات */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-item {
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 15px;
+            transition: transform 0.3s;
+            animation: slideUp 0.5s ease-out;
+        }
+
+        .skill-item:hover {
+            transform: translateY(-5px);
+            background: #0f172a;
+        }
+
+        .skill-icon {
+            font-size: 2.5rem;
+            color: #0ea5e9;
+            margin-bottom: 1rem;
+        }
+
+        /* أعمالي */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: #1e293b;
+            padding: 1.5rem;
+            border-radius: 15px;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* التواصل */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            margin: 1rem 0;
+            background: #1e293b;
+            border: 2px solid #334155;
+            color: #f8fafc;
+            border-radius: 8px;
+            transition: border-color 0.3s;
+        }
+
+        .form-input:focus {
+            border-color: #0ea5e9;
+            outline: none;
+        }
+
+        .submit-btn {
+            background: #0ea5e9;
+            color: #fff;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #1e3a8a;
+        }
+
+        /* التجاوب */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <h1>ستيفن عادل</h1>
+            <h3>مطور ويب محترف</h3>
+            <p>تخصص في بناء مواقع ويب عالية الجودة بأحدث التقنيات</p>
+        </div>
+    </header>
+
+    <section id="skills">
+        <div class="container">
+            <h2>المهارات التقنية</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <h3>HTML5</h3>
+                    <p>بناء هيكل موقع متكامل وفق أحدث المعايير</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <h3>CSS3</h3>
+                    <p>تصميمات مبتكرة وتجربة مستخدم فريدة</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-js-square skill-icon"></i>
+                    <h3>JavaScript</h3>
+                    <p>وظائف تفاعلية وتحسين الأداء</p>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-python skill-icon"></i>
+                    <h3>Python</h3>
+                    <p>حلول برمجية متقدمة وسكريبتات مخصصة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>المشاريع الحديثة</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>موقع تجاري إلكتروني</h3>
+                    <p>منصة متكاملة لإدارة المبيعات والعملاء</p>
+                </div>
+                <div class="project-card">
+                    <h3>نظام إدارة المحتوى</h3>
+                    <p>لوحة تحكم مخصصة لإدارة المواقع بكفاءة</p>
+                </div>
+                <div class="project-card">
+                    <h3>تطبيق ويب تعليمي</h3>
+                    <p>منصة تعليمية تفاعلية بأنظمة متقدمة</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>تواصل معي</h2>
+            <form class="contact-form">
+                <input type="text" class="form-input" placeholder="الاسم الكامل">
+                <input type="email" class="form-input" placeholder="البريد الإلكتروني">
+                <textarea class="form-input" rows="5" placeholder="الرسالة"></textarea>
+                <button type="submit" class="submit-btn">إرسال الرسالة</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // تأثيرات التمرير البسيطة
+        window.addEventListener('scroll', () => {
+            const elements = document.querySelectorAll('.skill-item, .project-card');
+            elements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.8) {
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
